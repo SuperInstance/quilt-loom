@@ -25,8 +25,11 @@ reports = data['reports']
 
 NAMES = {'mines_safe': 'Minesweeper safe-cells', 'reversi_flips': 'Reversi flips',
          'life_step': 'Conway life step', 'hearts_trick': 'Hearts trick winner',
-         'holdem_cat': "Hold'em hand category"}
-SERIES = [TIDE, AMBER, ROSE, TIDE2, '#9B8CF2']
+         'holdem_cat': "Hold'em hand category",
+         'pager_band': 'Fleet-pager hysteresis', 'witness_fnv': 'Witness fnv-1a-64',
+         'cosine_sparse': 'Ocean-recall cosine', 'hand_eval5': "Hold'em 5-card eval",
+         'gate_law': 'Cortex gate law'}
+SERIES = [TIDE, AMBER, ROSE, TIDE2, '#9B8CF2', '#5FD3A5', '#F2A93B', '#7FB4F2', '#E06C9F', '#8CD867']
 
 # ── 1. the divergence frontier ──
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.5, 4.6), constrained_layout=True)
