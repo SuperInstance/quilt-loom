@@ -7,6 +7,8 @@
 // 4. the forge hardens under pressure; scars accumulate
 import { GRID_TARGETS } from './loom/targets_grid.mjs';
 import { CARD_TARGETS } from './loom/targets_cards.mjs';
+import { FLEET_TARGETS } from './loom/targets_fleet.mjs';
+import { MIND_TARGETS } from './loom/targets_mind.mjs';
 import { compile, runProbes, evaluate, structSketch, structDist } from './loom/engine_lib.mjs';
 import { Loom } from './loom/loom.mjs';
 import { sealChain, verifyChain } from './loom/receipts.mjs';
@@ -17,7 +19,7 @@ const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? ' — ' + detail : ''}`);
 };
 
-const TARGETS = [...GRID_TARGETS, ...CARD_TARGETS];
+const TARGETS = [...GRID_TARGETS, ...CARD_TARGETS, ...FLEET_TARGETS, ...MIND_TARGETS];
 
 // ── 1. pristine family renders must be born functional ──
 for (const t of TARGETS) {

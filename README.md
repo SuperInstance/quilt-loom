@@ -157,3 +157,37 @@ shapes), the wildcard voice widened to per-family GLM rewrites, MOTH-resonance
 as a structural-distance oracle ("do two bloodlines resonate on the quantum
 probe?"), and wiring the loom's archive back into arena minds as swappable
 logic skins.
+
+---
+
+## 10. THE FLEET CHAPTER — the loom GANs the portfolio (targets_fleet + targets_mind)
+
+The foundry turned on its own family. Five new contracts lifted **line-for-line
+from the SuperInstance portfolio** joined the game targets:
+
+| target | lifted from | the contract | elites | diversity |
+|---|---|---|---|---|
+| `pager_band` | quilt-tools/01 fleet-pager | edge-triggered paging bands with hysteresis + first-sample guard | 3 offline / 2 live | 0.676 (live) |
+| `witness_fnv` | ledger-seal + ocean receipts | fnv-1a-64 witness idiom (3 exact doctrines: bigint fold / hi-lo 32-bit schoolbook / paired stepping) | 4 | 0.595 |
+| `cosine_sparse` | quilt-tools/03 ocean-recall | sparse integer cosine (exact rationals — no float lottery) | 3 | 0.552 |
+| `hand_eval5` | quilt-arcade/games/holdem | 5-card best class + kickers (wheel straights are the scar farm) | 3 | 0.528 |
+| `gate_law` | quilt-cortex chord | the gate: pmax ≥ 0.55 ∧ doubt < 0.5 → accept; ≥ 0.35 → flag; else escalate | 3 | 0.619 — most divergent target in the foundry |
+
+**The offline run** (10 targets × 24 gens × 8 candidates = **1,920 specimens**):
+80 fakes caught, 51 crowns, every witness chain verified, 4.1 s.
+
+**The fleet live leg** (`run_fleet_live.mjs`) runs the full chord spine on the
+fleet contracts: 12/12 real typesafe.ai director calls, ≤ 2 GLM System-Two
+wildcards, MOTH entropy packets, then a replay pass from cache (0 new calls,
+byte-identical verdicts). In the live leg a **GLM-written wildcard implementation
+of the fleet-pager hysteresis contract was crowned alien** — func 1.0, novelty
+0.887 — AI-authored logic entering the durable archive, behaviorally exact,
+structurally unlike every mech bloodline.
+
+**The write-back** (`harden_fleet.mjs`): 20 crowned elites returned to their
+host projects as GAN-hardened modules — `quilt-tools/gan-elites/` (×3),
+`quilt-arcade/games/holdem/gan-elites/`, `quilt-quant/lab/gan-elites/` — each
+hosted with a vendored `contract.mjs` (oracle + canon + 200-probe frozen
+corpus) and a self-contained `verify.mjs`. In-place verdict: **4,192/4,192
+equivalence checks pass**, structural distance from oracles 0.43–0.92. The
+logic is divergent in form and exact in behavior — durable, anywhere cloned.

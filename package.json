@@ -2,6 +2,7 @@
   "name": "quilt-loom",
   "type": "module",
   "dependencies": {
-    "yaml": "^2.9.1"
+    "yaml": "^2.9.1",
+    "z-ai-web-dev-sdk": "0.0.18"
   }
 }

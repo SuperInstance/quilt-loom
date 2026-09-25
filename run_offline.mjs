@@ -16,6 +16,8 @@ import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { GRID_TARGETS } from './loom/targets_grid.mjs';
 import { CARD_TARGETS } from './loom/targets_cards.mjs';
+import { FLEET_TARGETS } from './loom/targets_fleet.mjs';
+import { MIND_TARGETS } from './loom/targets_mind.mjs';
 import { Loom } from './loom/loom.mjs';
 import { mulberry32 } from './loom/receipts.mjs';
 
@@ -42,7 +44,7 @@ function syntheticMoth() {
 }
 
 const moth = syntheticMoth();
-const TARGETS = [...GRID_TARGETS, ...CARD_TARGETS];
+const TARGETS = [...GRID_TARGETS, ...CARD_TARGETS, ...FLEET_TARGETS, ...MIND_TARGETS];
 const t0 = Date.now();
 const traceFd = [];
 const reports = [];

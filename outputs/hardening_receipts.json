@@ -1,0 +1,191 @@
+{
+ "run": "loom harden_fleet write-back",
+ "date": "2026-09-25T21:23:30.541Z",
+ "hosts": [
+  {
+   "target": "pager_band",
+   "host": "../quilt-tools/gan-elites/pager-band",
+   "project": "quilt-tools/01 fleet-pager (hysteresis paging bands)",
+   "elites": [
+    {
+     "family": "rules_table",
+     "hash": "dac5cc639a",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 1
+    },
+    {
+     "family": "wildcard",
+     "hash": "glm-muhgv301",
+     "voice": "systwo",
+     "leg": "live",
+     "novelty": 0.88676
+    },
+    {
+     "family": "boolean_index",
+     "hash": "6f73333f95",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 1
+    },
+    {
+     "family": "rules_table",
+     "hash": "dac5cc639a",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 0.86615
+    }
+   ],
+   "corpus_size": 215,
+   "seal": "0xfd3f0c8c97b0dd69"
+  },
+  {
+   "target": "witness_fnv",
+   "host": "../quilt-tools/gan-elites/witness-fnv",
+   "project": "quilt-tools/02 ledger-seal + ocean receipts (the witness idiom)",
+   "elites": [
+    {
+     "family": "hilo32",
+     "hash": "3d237a99ef",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 1
+    },
+    {
+     "family": "word_pairs",
+     "hash": "9a04940bda",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 0.85819
+    },
+    {
+     "family": "bigint_fold",
+     "hash": "aa28e37705",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 1
+    },
+    {
+     "family": "hilo32",
+     "hash": "3d237a99ef",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 0.84789
+    }
+   ],
+   "corpus_size": 208,
+   "seal": "0x45c530feb1d92fa8"
+  },
+  {
+   "target": "cosine_sparse",
+   "host": "../quilt-tools/gan-elites/cosine-sparse",
+   "project": "quilt-tools/03 ocean-recall (sparse integer cosine)",
+   "elites": [
+    {
+     "family": "sorted_two_pointer",
+     "hash": "d3e5fd7d58",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 1
+    },
+    {
+     "family": "sorted_two_pointer",
+     "hash": "d3e5fd7d58",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 1
+    },
+    {
+     "family": "a_key_scan",
+     "hash": "b5ad63c6e9",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 0.84192
+    },
+    {
+     "family": "union_set",
+     "hash": "d952b7a8da",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 0.82935
+    }
+   ],
+   "corpus_size": 207,
+   "seal": "0x227b4c9ca8fda7db"
+  },
+  {
+   "target": "hand_eval5",
+   "host": "../quilt-arcade/games/holdem/gan-elites",
+   "project": "quilt-arcade/games/holdem (5-card evaluation)",
+   "elites": [
+    {
+     "family": "count_entries",
+     "hash": "4c8209d42c",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 1
+    },
+    {
+     "family": "bit_count_scan",
+     "hash": "e0b651489c",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 0.85107
+    },
+    {
+     "family": "sorted_runs",
+     "hash": "4b916d85be",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 0.82459
+    },
+    {
+     "family": "bit_count_scan",
+     "hash": "e0b651489c",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 1
+    }
+   ],
+   "corpus_size": 210,
+   "seal": "0xa763482daefc7964"
+  },
+  {
+   "target": "gate_law",
+   "host": "../quilt-quant/lab/gan-elites",
+   "project": "quilt-quant/lab (the chord gate law)",
+   "elites": [
+    {
+     "family": "sorted_index",
+     "hash": "9c294496f8",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 1
+    },
+    {
+     "family": "math_max_ternary",
+     "hash": "07c8e72d59",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 0.87102
+    },
+    {
+     "family": "reduce_carrier",
+     "hash": "f177d74468",
+     "voice": "mech",
+     "leg": "live",
+     "novelty": 0.86043
+    },
+    {
+     "family": "math_max_ternary",
+     "hash": "07c8e72d59",
+     "voice": "mech",
+     "leg": "offline",
+     "novelty": 1
+    }
+   ],
+   "corpus_size": 208,
+   "seal": "0x15ebceeb82208eff"
+  }
+ ]
+}

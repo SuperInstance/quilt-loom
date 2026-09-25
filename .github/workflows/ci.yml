@@ -1,0 +1,19 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: npm install --no-save yaml || true
+      - name: born-correct + sheet reflexes (75 checks)
+        run: node smoke.mjs
+      - name: full offline divergence run (1920 specimens)
+        run: node run_offline.mjs
+      - name: harden_fleet write-back dry check
+        run: node -e "import('./loom/targets_fleet.mjs').then(()=>import('./loom/targets_mind.mjs')).then(()=>console.log('fleet targets importable OK'))"
