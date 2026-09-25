@@ -1,0 +1,326 @@
+{
+ "run": "divergence-foundry live leg",
+ "date": "2026-09-25T19:48:46.372Z",
+ "budgets": {
+  "jev_real": 8,
+  "jev_cap": 12,
+  "moth_live": 0,
+  "glm_wildcards": 2
+ },
+ "journal_receipts": 40,
+ "reports": [
+  {
+   "target": "hearts_trick",
+   "title": "Hearts — trick winner",
+   "gens": 4,
+   "archive": [
+    {
+     "family": "for_scan",
+     "hash": "eb26ed6a4a",
+     "novelty": 1,
+     "behav": 1,
+     "struct": 1,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 228
+    },
+    {
+     "family": "wildcard",
+     "hash": "glm-muhdiw5m",
+     "novelty": 0.86092,
+     "behav": 1,
+     "struct": 0.60263,
+     "voice": "systwo",
+     "gen": 4,
+     "corruption": 0,
+     "src_bytes": 450
+    },
+    {
+     "family": "for_scan",
+     "hash": "5a17655b24",
+     "novelty": 0.73572,
+     "behav": 1,
+     "struct": 0.2449,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 234
+    },
+    {
+     "family": "for_scan",
+     "hash": "6bdfde233b",
+     "novelty": 0.72363,
+     "behav": 1,
+     "struct": 0.21037,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 230
+    }
+   ],
+   "elites_src": [
+    {
+     "family": "for_scan",
+     "hash": "eb26ed6a4a",
+     "src": "function solve(input) {\n  const plays = input.plays;\n  const lead = plays[0].s;\n  let best = 0;\n  for (let i = 1; i < plays.length; i++) {\n    if (plays[i].s === lead && plays[i].r > plays[best].r) best = i;\n  }\n  return best;\n}"
+    },
+    {
+     "family": "wildcard",
+     "hash": "glm-muhdiw5m",
+     "src": "function solve(input) {\n    let winner = 0;\n    let lead = input.plays[0].s;\n    let highest = input.plays[0].r;\n    \n    let idx = 0;\n    const len = input.plays.length;\n    const step = len > 1 ? 1 : 0;\n    \n    do {\n        idx += step;\n        const play = input.plays[idx];\n        if (play.s === lead && play.r > highest) {\n            highest = play.r;\n            winner = idx;\n        }\n    } while (idx < len - 1);\n    \n    return winner;\n}"
+    },
+    {
+     "family": "for_scan",
+     "hash": "5a17655b24",
+     "src": "function solve(input) {\n  const plays = input.plays;\n  const lead = plays[0].s;\n  let best = 0;\n  for (let i = plays.length - 1; i >= 1; i--) {\n    if (plays[i].s === lead && plays[i].r >= plays[best].r) best = i;\n  }\n  return best;\n}"
+    },
+    {
+     "family": "for_scan",
+     "hash": "6bdfde233b",
+     "src": "function solve(input) {\n  const plays = input.plays;\n  const lead = plays[0].s;\n  let best = 0, i = 1;\n  while (i < plays.length) {\n    if (plays[i].s === lead && plays[i].r > plays[best].r) best = i;\n    i++;\n  }\n  return best;\n}"
+    }
+   ],
+   "record": 1,
+   "diversity": 0.43809,
+   "stats": {
+    "caught": 0,
+    "mimic": 29,
+    "divergent": 0,
+    "alien": 3,
+    "crowned": 3,
+    "systwo": 2,
+    "sheet_host_disagree": 0
+   },
+   "forge": {
+    "probes": 60,
+    "scarred": 0,
+    "budget": 24,
+    "rounds": 4,
+    "kinds": {
+     "base": 6,
+     "random": 11,
+     "boundary": 7,
+     "quantum": 16,
+     "rare": 12,
+     "trickle": 8
+    }
+   },
+   "chain_ok": true,
+   "chain_links": 36,
+   "director_calls": 2,
+   "director_sources": [
+    "live"
+   ]
+  },
+  {
+   "target": "holdem_cat",
+   "title": "Hold'em — five-card category",
+   "gens": 6,
+   "archive": [
+    {
+     "family": "run_pattern",
+     "hash": "3a0d83dc03",
+     "novelty": 1,
+     "behav": 1,
+     "struct": 1,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 892
+    },
+    {
+     "family": "bitset",
+     "hash": "6ff39a7a5a",
+     "novelty": 0.8664,
+     "behav": 1,
+     "struct": 0.61828,
+     "voice": "mech",
+     "gen": 3,
+     "corruption": 0.15,
+     "src_bytes": 841
+    },
+    {
+     "family": "run_pattern",
+     "hash": "20c00f1a33",
+     "novelty": 0.81313,
+     "behav": 1,
+     "struct": 0.46609,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 749
+    },
+    {
+     "family": "bitset",
+     "hash": "e74dcfa3c5",
+     "novelty": 0.78169,
+     "behav": 1,
+     "struct": 0.37627,
+     "voice": "mech",
+     "gen": 3,
+     "corruption": 0.15,
+     "src_bytes": 945
+    }
+   ],
+   "elites_src": [
+    {
+     "family": "run_pattern",
+     "hash": "3a0d83dc03",
+     "src": "function solve(input) {\n  const vals = input.cards.map(c => c[0]).sort((a, b) => a - b);\n  const flush = input.cards.every(c => c[1] === input.cards[0][1]);\n  const runs = [];\n  for (const v of vals) {\n    if (runs.length && runs[runs.length - 1][0] === v) runs[runs.length - 1][1]++;\n    else runs.push([v, 1]);\n  }\n  const shape = runs.map(r => r[1]).sort((a, b) => b - a).join('');\n  let straight = false;\n  if (runs.length === 5) {\n    let consec = true;\n    for (let i = 1; i < 5; i++) if (vals[i] !== vals[0] + i) consec = false;\n    straight = consec;\n    if (!straight && vals.join() === \"2,3,4,5,14\") straight = true;\n  }\n  if (flush && straight) return 8;\n  if (shape === '41') return 7;\n  if (shape === '32') return 6;\n  if (flush) return 5;\n  if (straight) return 4;\n  if (shape === '311') return 3;\n  if (shape === '221') return 2;\n  if (shape === '2111') return 1;\n  return 0;\n}"
+    },
+    {
+     "family": "bitset",
+     "hash": "6ff39a7a5a",
+     "src": "function solve(input) {\n  let mask = 0;\n  const cnt = {};\n  for (const [r] of input.cards) { mask |= (1 << r); cnt[r] = (cnt[r] || 0) + 1; }\n  let flush = true;\n  for (const c of input.cards) if (c[1] !== input.cards[0][1]) flush = false;\n  let straightHigh = 0, run = 0;\n  for (let v = 2; v <= 14; v++) {\n    run = (mask & (1 << v)) ? run + 1 : 0;\n    if (run >= 5) straightHigh = v;\n  }\n  if ((mask & 0x403c) === 0x403c) straightHigh = 5; // wheel A-5\n  let maxC = 0, pairs = 0;\n  for (const k in cnt) {\n    if (cnt[k] > maxC) maxC = cnt[k];\n    if (cnt[k] === 2) pairs++;\n  }\n  if (flush && straightHigh) return 8;\n  if (maxC === 4) return 7;\n  if (maxC === 3 && pairs === 1) return 6;\n  if (flush) return 5;\n  if (straightHigh) return 4;\n  if (maxC === 3) return 3;\n  if (pairs === 2) return 2;\n  if (pairs === 1) return 1;\n  return 0;\n}"
+    },
+    {
+     "family": "run_pattern",
+     "hash": "20c00f1a33",
+     "src": "function solve(input) {\n  const flush = input.cards.every(c => c[1] === input.cards[0][1]);\n  const cnt = new Map();\n  for (const [r] of input.cards) cnt.set(r, (cnt.get(r) || 0) + 1);\n  const shape = [...cnt.values()].sort((a, b) => b - a).join('');\n  const distinct = [...cnt.keys()].sort((a, b) => a - b);\n  let straight = false;\n  if (distinct.length === 5) {\n    straight = distinct[4] - distinct[0] === 4;\n    if (!straight && distinct.join() === \"2,3,4,5,14\") straight = true;\n  }\n  if (flush && straight) return 8;\n  if (shape === '41') return 7;\n  if (shape === '32') return 6;\n  if (flush) return 5;\n  if (straight) return 4;\n  if (shape === '311') return 3;\n  if (shape === '221') return 2;\n  if (shape === '2111') return 1;\n  return 0;\n}"
+    },
+    {
+     "family": "bitset",
+     "hash": "e74dcfa3c5",
+     "src": "function solve(input) {\n  let mask = 0;\n  const cnt = {};\n  for (const [r] of input.cards) { mask |= (1 << r); cnt[r] = (cnt[r] || 0) + 1; }\n  let flush = true;\n  for (const c of input.cards) if (c[1] !== input.cards[0][1]) flush = false;\n  let straightHigh = 0;\n  for (let hi = 6; hi <= 14; hi++) {\n    let all = true;\n    for (let v = hi - 4; v <= hi; v++) if (!(mask & (1 << v))) all = false;\n    if (all) straightHigh = hi;\n  }\n  let wheel = true;\n  for (const v of [14, 2, 3, 4, 5]) if (!(mask & (1 << v))) wheel = false;\n  if (wheel) straightHigh = 5;\n  let maxC = 0, pairs = 0;\n  for (const k in cnt) {\n    if (cnt[k] > maxC) maxC = cnt[k];\n    if (cnt[k] === 2) pairs++;\n  }\n  if (flush && straightHigh) return 8;\n  if (maxC === 4) return 7;\n  if (maxC === 3 && pairs === 1) return 6;\n  if (flush) return 5;\n  if (straightHigh) return 4;\n  if (maxC === 3) return 3;\n  if (pairs === 2) return 2;\n  if (pairs === 1) return 1;\n  return 0;\n}"
+    }
+   ],
+   "record": 1,
+   "diversity": 0.54605,
+   "stats": {
+    "caught": 0,
+    "mimic": 44,
+    "divergent": 0,
+    "alien": 4,
+    "crowned": 4,
+    "systwo": 0,
+    "sheet_host_disagree": 0
+   },
+   "forge": {
+    "probes": 64,
+    "scarred": 0,
+    "budget": 24,
+    "rounds": 6,
+    "kinds": {
+     "base": 10,
+     "random": 7,
+     "boundary": 7,
+     "quantum": 4,
+     "rare": 12,
+     "trickle": 8,
+     "quantum-mock": 16
+    }
+   },
+   "chain_ok": true,
+   "chain_links": 54,
+   "director_calls": 3,
+   "director_sources": [
+    "live"
+   ]
+  },
+  {
+   "target": "life_step",
+   "title": "Conway life — one step, dead borders",
+   "gens": 6,
+   "archive": [
+    {
+     "family": "offset_fold",
+     "hash": "1ba96298c5",
+     "novelty": 1,
+     "behav": 1,
+     "struct": 1,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 604
+    },
+    {
+     "family": "flat_kernel",
+     "hash": "0aab3e36f6",
+     "novelty": 0.8285,
+     "behav": 1,
+     "struct": 0.51001,
+     "voice": "mech",
+     "gen": 6,
+     "corruption": 0.15,
+     "src_bytes": 666
+    },
+    {
+     "family": "offset_fold",
+     "hash": "7822eb1f4f",
+     "novelty": 0.76654,
+     "behav": 1,
+     "struct": 0.33298,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 597
+    },
+    {
+     "family": "offset_fold",
+     "hash": "58ba28dd02",
+     "novelty": 0.74879,
+     "behav": 1,
+     "struct": 0.28225,
+     "voice": "mech",
+     "gen": 1,
+     "corruption": 0.15,
+     "src_bytes": 606
+    }
+   ],
+   "elites_src": [
+    {
+     "family": "offset_fold",
+     "hash": "1ba96298c5",
+     "src": "function solve(input) {\n  const g = input.grid, H = g.length, W = g[0].length;\n  const DIRS = [[1,1],[-1,1],[0,-1],[0,1],[-1,0],[1,-1],[1,0],[-1,-1]];\n  const out = [];\n  for (let r = 0; r < H; r++) {\n    const row = [];\n    for (let c = 0; c < W; c++) {\n      const n = DIRS.reduce((s, [dr, dc]) => {\n        const nr = r + dr, nc = c + dc;\n        return s + (nr >= 0 && nc >= 0 && nr < H && nc < W ? g[nr][nc] : 0);\n      }, 0);\n      const alive = g[r][c];\n      const next = alive ? (n === 2 || n === 3 ? 1 : 0) : (n === 3 ? 1 : 0);\n      row.push(next);\n    }\n    out.push(row);\n  }\n  return out;\n}"
+    },
+    {
+     "family": "flat_kernel",
+     "hash": "0aab3e36f6",
+     "src": "function solve(input) {\n  const g = input.grid, H = g.length, W = g[0].length;\n  const flat = g.flat();\n  const KER = [1,1,1,1,1,1,1,1];\n  const DIRS = [[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]];\n  const out = [];\n  for (let i = 0; i < H * W; i++) {\n    const r = Math.floor(i / W), c = i % W;\n    let n = 0;\n    DIRS.forEach(([dr, dc], k) => {\n      const nr = r + dr, nc = c + dc;\n      if (nr >= 0 && nc >= 0 && nr < H && nc < W) n += flat[nr * W + nc] * KER[k];\n    });\n    const alive = flat[i];\n    out.push(alive ? (n === 2 || n === 3 ? 1 : 0) : (n === 3 ? 1 : 0));\n  }\n  return Array.from({ length: H }, (_, r) => out.slice(r * W, r * W + W));\n}"
+    },
+    {
+     "family": "offset_fold",
+     "hash": "7822eb1f4f",
+     "src": "function solve(input) {\n  const g = input.grid, H = g.length, W = g[0].length;\n  const DIRS = [[1,0],[0,1],[-1,1],[-1,0],[1,1],[0,-1],[-1,-1],[1,-1]];\n  const out = [];\n  for (let r = 0; r < H; r++) {\n    const row = [];\n    for (let c = 0; c < W; c++) {\n      let n = 0;\n      for (const [dr, dc] of DIRS) {\n        const nr = r + dr, nc = c + dc;\n        if (nr >= 0 && nc >= 0 && nr < H && nc < W) n += g[nr][nc];\n      }\n      const alive = g[r][c];\n      const next = alive ? (n === 2 || n === 3 ? 1 : 0) : (n === 3 ? 1 : 0);\n      row.push(next);\n    }\n    out.push(row);\n  }\n  return out;\n}"
+    },
+    {
+     "family": "offset_fold",
+     "hash": "58ba28dd02",
+     "src": "function solve(input) {\n  const g = input.grid, H = g.length, W = g[0].length;\n  const DIRS = [[-1,1],[-1,0],[-1,-1],[0,-1],[1,1],[1,-1],[0,1],[1,0]];\n  const out = [];\n  for (let r = 0; r < H; r++) {\n    const row = [];\n    for (let c = 0; c < W; c++) {\n      const n = DIRS.map(([dr, dc]) => [r + dr, c + dc])\n        .filter(([nr, nc]) => nr >= 0 && nc >= 0 && nr < H && nc < W)\n        .reduce((s, [nr, nc]) => s + g[nr][nc], 0);\n      const alive = g[r][c];\n      const next = alive ? (n === 2 || n === 3 ? 1 : 0) : (n === 3 ? 1 : 0);\n      row.push(next);\n    }\n    out.push(row);\n  }\n  return out;\n}"
+    }
+   ],
+   "record": 1,
+   "diversity": 0.40708,
+   "stats": {
+    "caught": 0,
+    "mimic": 44,
+    "divergent": 0,
+    "alien": 4,
+    "crowned": 4,
+    "systwo": 0,
+    "sheet_host_disagree": 48
+   },
+   "forge": {
+    "probes": 64,
+    "scarred": 0,
+    "budget": 30,
+    "rounds": 6,
+    "kinds": {
+     "base": 7,
+     "random": 10,
+     "boundary": 7,
+     "quantum-mock": 20,
+     "rare": 12,
+     "trickle": 8
+    }
+   },
+   "chain_ok": true,
+   "chain_links": 54,
+   "director_calls": 3,
+   "director_sources": [
+    "live"
+   ]
+  }
+ ]
+}
